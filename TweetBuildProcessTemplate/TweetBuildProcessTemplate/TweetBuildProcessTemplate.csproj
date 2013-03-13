@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C7185E70-A057-49C6-8AD9-EF795C80E005}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TweetBuildProcessTemplate</RootNamespace>
+    <AssemblyName>TweetBuildProcessTemplate</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\..\..\tomohn-tfs\BuildProcessTemplates\Custom Assemblies\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build.Config">
+      <HintPath>..\..\..\..\..\Program Files\Microsoft Team Foundation Server 11.0\Tools\Microsoft.TeamFoundation.Build.Config.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build.Config.Controls">
+      <HintPath>..\..\..\..\..\Program Files\Microsoft Team Foundation Server 11.0\Tools\Microsoft.TeamFoundation.Build.Config.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build.Controls">
+      <HintPath>..\..\..\..\..\Program Files\Microsoft Team Foundation Server 11.0\Tools\Microsoft.TeamFoundation.Build.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build.ProcessComponents">
+      <HintPath>..\..\..\..\..\Program Files\Microsoft Team Foundation Server 11.0\Tools\Microsoft.TeamFoundation.Build.ProcessComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build.Server">
+      <HintPath>..\..\..\..\..\Program Files\Microsoft Team Foundation Server 11.0\Tools\Microsoft.TeamFoundation.Build.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build.Server.Logger">
+      <HintPath>..\..\..\..\..\Program Files\Microsoft Team Foundation Server 11.0\Tools\Microsoft.TeamFoundation.Build.Server.Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build.Workflow, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Microsoft Team Foundation Server 11.0\Tools\Microsoft.TeamFoundation.Build.Workflow.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Framework.Server">
+      <HintPath>..\..\..\..\..\Program Files\Microsoft Team Foundation Server 11.0\Tools\Microsoft.TeamFoundation.Framework.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Server">
+      <HintPath>..\..\..\..\..\Program Files\Microsoft Team Foundation Server 11.0\Tools\Microsoft.TeamFoundation.VersionControl.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TeamSystem.Common.Framework">
+      <HintPath>..\..\..\..\..\Program Files\Microsoft Team Foundation Server 11.0\Tools\Microsoft.VisualStudio.TeamSystem.Common.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Workflow.Runtime" />
+    <Reference Include="System.WorkflowServices" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TfsBuildExtensions.Activities">
+      <HintPath>..\..\..\..\tomohn-tfs\BuildProcessTemplates\Custom Assemblies\TfsBuildExtensions.Activities.dll</HintPath>
+    </Reference>
+    <Reference Include="TfsBuildExtensions.Activities.AWS">
+      <HintPath>..\..\..\..\tomohn-tfs\BuildProcessTemplates\Custom Assemblies\TfsBuildExtensions.Activities.AWS.dll</HintPath>
+    </Reference>
+    <Reference Include="TfsBuildExtensions.Activities.Azure">
+      <HintPath>..\..\..\..\tomohn-tfs\BuildProcessTemplates\Custom Assemblies\TfsBuildExtensions.Activities.Azure.dll</HintPath>
+    </Reference>
+    <Reference Include="TfsBuildExtensions.Activities.IIS7">
+      <HintPath>..\..\..\..\tomohn-tfs\BuildProcessTemplates\Custom Assemblies\TfsBuildExtensions.Activities.IIS7.dll</HintPath>
+    </Reference>
+    <Reference Include="TfsBuildExtensions.Activities.ILMerge">
+      <HintPath>..\..\..\..\tomohn-tfs\BuildProcessTemplates\Custom Assemblies\TfsBuildExtensions.Activities.ILMerge.dll</HintPath>
+    </Reference>
+    <Reference Include="TfsBuildExtensions.Activities.LabManagement">
+      <HintPath>..\..\..\..\tomohn-tfs\BuildProcessTemplates\Custom Assemblies\TfsBuildExtensions.Activities.LabManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="TfsBuildExtensions.Activities.StyleCop">
+      <HintPath>..\..\..\..\tomohn-tfs\BuildProcessTemplates\Custom Assemblies\TfsBuildExtensions.Activities.StyleCop.dll</HintPath>
+    </Reference>
+    <Reference Include="TfsBuildExtensions.Activities.VirtualPC">
+      <HintPath>..\..\..\..\tomohn-tfs\BuildProcessTemplates\Custom Assemblies\TfsBuildExtensions.Activities.VirtualPC.dll</HintPath>
+    </Reference>
+    <Reference Include="TfsBuildExtensions.Activities.VisualStudio">
+      <HintPath>..\..\..\..\tomohn-tfs\BuildProcessTemplates\Custom Assemblies\TfsBuildExtensions.Activities.VisualStudio.dll</HintPath>
+    </Reference>
+    <Reference Include="TfsBuildExtensions.TfsUtilities">
+      <HintPath>..\..\..\..\tomohn-tfs\BuildProcessTemplates\Custom Assemblies\TfsBuildExtensions.TfsUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="XamlBuildTask" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="TweetTemplate.11.1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
